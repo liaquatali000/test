@@ -27,5 +27,4 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-          eb init -r us-east-1 -p Node.js HTML-env
           eb deploy
