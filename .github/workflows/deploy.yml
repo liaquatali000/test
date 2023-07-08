@@ -26,6 +26,10 @@ jobs:
           sudo apt-get install -y python3-pip
           pip3 install --user awsebcli
 
+      - name: Initialize Elastic Beanstalk environment
+        run: |
+          eb init HTML-env --platform PHP --region us-east-1 --profile default
+
       - name: Deploy to Elastic Beanstalk
         run: |
           eb deploy HTML-env --env HTML
