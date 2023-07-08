@@ -31,4 +31,5 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-          eb deploy HTML-env --label HTML
+          eb deploy HTML-env --version HTML-version-1 --env HTML
+
