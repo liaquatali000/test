@@ -32,4 +32,4 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-          eb deploy HTML-env --env HTML
+          eb deploy HTML-env --version app-0260-230708_041329993698 --env HTML
