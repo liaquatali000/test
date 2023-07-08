@@ -22,9 +22,11 @@ jobs:
 
       - name: Install Elastic Beanstalk CLI
         run: |
-          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
- 
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install --user awsebcli
 
       - name: Deploy to Elastic Beanstalk
         run: |
+          eb init -r us-east-1 -p PHP
           eb deploy
